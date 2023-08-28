@@ -18,7 +18,7 @@ namespace SRP
             this.Code = code;
         }
 
-        public void ShelveBook(String sector, String shelve)
+        public void ShelveBook(String sector, String shelve) //ShelveBook debería ser otra clase
         {
             this.LibrarySector = sector;
             this.LibraryShelve = shelve;
