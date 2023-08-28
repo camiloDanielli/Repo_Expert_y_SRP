@@ -22,11 +22,14 @@ namespace SRP
             this.Code = code;
         }
 
-        public void ShelveBook(String sector, String shelve) //ShelveBook debería ser otra clase
-        {
-            this.LibrarySector = sector;
-            this.LibraryShelve = shelve;
-        }
+       
 
     }
+
+     public class ShelveBook(Book libro, String sector, String shelve) //ShelveBook debería ser otra clase
+    {
+        libro.LibrarySector = sector;
+        libro.LibraryShelve = shelve;
+    }
+    
 }
