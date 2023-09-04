@@ -8,6 +8,8 @@ namespace SRP
         public string Title { get ; }
         public string Author { get ; }
         public string Code { get ;  }
+        public string LibrarySector { get ; }
+        public string LibraryShelve { get ; }
         
 
         /*No cumple con el principio de responsabilidad única porque además de los datos intrínsecos del libro, 
