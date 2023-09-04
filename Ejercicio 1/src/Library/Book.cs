@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Ucu.Poo.Expert
 {
@@ -8,8 +8,8 @@ namespace Ucu.Poo.Expert
         public string Title { get ; }
         public string Author { get ; }
         public string Code { get ;  }
-        public string LibrarySector { get ; }
-        public string LibraryShelve { get ; }
+        public string LibrarySector { get ; set;}
+        public string LibraryShelve { get ; set;}
         
 
         /*No cumple con el principio de responsabilidad única porque además de los datos intrínsecos del libro, 
