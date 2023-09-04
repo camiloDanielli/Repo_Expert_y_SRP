@@ -8,8 +8,7 @@ namespace SRP
         public string Title { get ; }
         public string Author { get ; }
         public string Code { get ;  }
-        public string LibrarySector { get ; set; }
-        public string LibraryShelve { get ; set; }
+        
 
         /*No cumple con el principio de responsabilidad única porque además de los datos intrínsecos del libro, 
         la clase Book maneja el lugar de la librería que ocupa el libro, y contiene un método para colocar al 
@@ -26,10 +25,6 @@ namespace SRP
 
     }
 
-     public class ShelveBook(Book libro, String sector, String shelve) //ShelveBook debería ser otra clase
-    {
-        libro.LibrarySector = sector;
-        libro.LibraryShelve = shelve;
-    }
+    
     
 }
