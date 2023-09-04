@@ -1,8 +1,8 @@
 namespace Ucu.Poo.Expert
 {
-    public class ShelveBook(Book libro, String sector, String shelve) //ShelveBook debería ser otra clase
+    public class ShelveBook(Book libro) //ShelveBook debería ser otra clase
       {
-          Public void SendBookToShelve(){
+          public static void SendBookToShelve(string sector, string shelve){
               libro.LibrarySector = sector;
               libro.LibraryShelve = shelve;
           }
