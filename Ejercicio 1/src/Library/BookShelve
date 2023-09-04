@@ -3,8 +3,8 @@ namespace Ucu.Poo.Expert
     public class ShelveBook(Book libro, String sector, String shelve) //ShelveBook debería ser otra clase
       {
           Public ShelveBook{
-              LibrarySector = this.sector;
-              LibraryShelve = this.shelve;
+              this.LibrarySector = sector;
+              this.LibraryShelve = shelve;
           }
           
       }
