@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using Ucu.Poo.Expert;
 
 namespace SRP
 {
@@ -11,7 +12,7 @@ namespace SRP
             Book book2 = new Book("Pro C#","Troelsen","001-035");
             ShelveBook.SendBookToShelve(book1, "A", "7");
             ShelveBook.SendBookToShelve(book2, "B", "7");
-
+            Console.WriteLine(book2.LibrarySector);
         }
     }
 }
