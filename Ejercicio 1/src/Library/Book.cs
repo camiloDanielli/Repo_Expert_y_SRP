@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SRP
+namespace Ucu.Poo.Expert
 {
     public class Book
     {
