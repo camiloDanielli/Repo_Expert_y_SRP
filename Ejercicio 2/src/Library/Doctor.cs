@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Library
 {
   public class Doctor
@@ -13,10 +15,20 @@ namespace Library
 
     public List<string> Propierties()
     {
+      
       List<string> propiedades = new List<string>();
       propiedades.Add(doctorName);
       propiedades.Add(appointmentPlace);
       return propiedades;
     }    
+
+    public List<string> PropiertiesNames()
+    {
+      List<string> listaPropiedades = new List<string>();
+      listaPropiedades.Add("name");
+      listaPropiedades.Add("appointment place");
+      return listaPropiedades;
+    }
+      
   }
 }
