@@ -7,7 +7,6 @@ namespace Library
 {
     public class AppointmentService
     {
-        //string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName
         public static string CreateAppointment(Person persona, Doctor doctor)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
@@ -27,7 +26,7 @@ namespace Library
             {
                 stringBuilder.Append(Validator.ValidatePerson(persona) + "\n");
                 stringBuilder.Append(Validator.ValidateDoctor(doctor) + "\n") ;
-                stringBuilder.Append("Appoinment scheduled")
+                stringBuilder.Append("Appoinment scheduled!")
             }
 
             return stringBuilder.ToString();
