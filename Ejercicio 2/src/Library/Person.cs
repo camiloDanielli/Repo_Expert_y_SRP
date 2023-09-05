@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Library
 {
   public class Person
@@ -21,5 +23,14 @@ namespace Library
       propiedades.Add(phoneNumber);
       return propiedades;
     }    
+
+    public List<string> PropiertiesNames()
+    {
+      List<string> listaPropiedades = new List<string>();
+      listaPropiedades.Add("name");
+      listaPropiedades.Add("id");
+      listaPropiedades.Add("phone number");
+      return listaPropiedades;
+    }
   }
 }
