@@ -1,4 +1,4 @@
-namespace Ejercicio2
+namespace Library
 {
   public class Validator
   {
