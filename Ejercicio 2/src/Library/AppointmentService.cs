@@ -1,49 +1,33 @@
 ﻿using System;
 using System.Text;
 
+
+
 namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        //string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName
+        public static string CreateAppointment(Person persona, Doctor doctor)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
 
-            if (string.IsNullOrEmpty(name))
+            if (Validator.ValidatePerson(persona) != "Person validated" )
             {
-                stringBuilder.Append("Unable to schedule appointment, 'name' is required\n");
                 isValid = false;
+                stringBuilder.Append(Validator.ValidatePerson(persona));
             }
-
-            if (string.IsNullOrEmpty(id))
+            else if (Validator.ValidateDoctor(doctor) != "Doctor validated")
             {
-                stringBuilder.Append("Unable to schedule appointment, 'id' is required\n");
                 isValid = false;
+                stringBuilder.Append(Validator.ValidateDoctor(doctor));
             }
-
-            if (string.IsNullOrEmpty(phoneNumber))
+            else
             {
-                stringBuilder.Append("Unable to schedule appointment, 'phone number' is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(appoinmentPlace))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'appoinment place' is required\n");
-                isValid = false;
-            }
-
-
-            if (string.IsNullOrEmpty(doctorName))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'doctor name' is required\n");
-                isValid = false;
-            }
-
-            if (isValid)
-            {
-                stringBuilder.Append("Appoinment scheduled");
+                stringBuilder.Append(Validator.ValidatePerson(persona) + "\n");
+                stringBuilder.Append(Validator.ValidateDoctor(doctor) + "\n") ;
+                stringBuilder.Append("Appoinment scheduled")
             }
 
             return stringBuilder.ToString();
